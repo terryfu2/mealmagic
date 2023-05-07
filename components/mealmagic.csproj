@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="breakfast.jfif" />
+    <None Remove="dessert.jpg" />
+    <None Remove="images\arrow-left.png" />
+    <None Remove="images\arrow-small-left.png" />
+    <None Remove="images\back-arrow.png" />
+    <None Remove="images\back.png" />
+    <None Remove="images\backbutton.png" />
+    <None Remove="images\breakfast.jfif" />
+    <None Remove="images\breakfast1.png" />
+    <None Remove="images\breakfast2.png" />
+    <None Remove="images\breakfast3.png" />
+    <None Remove="images\breakfast4.png" />
+    <None Remove="images\CajunStuffedPeppers.jpg" />
+    <None Remove="images\ContactPage.PNG" />
+    <None Remove="images\decrease.png" />
+    <None Remove="images\dessert.jpg" />
+    <None Remove="images\favheart.png" />
+    <None Remove="images\favheartfull.png" />
+    <None Remove="images\filledheart.png" />
+    <None Remove="images\filter.png" />
+    <None Remove="images\forward.png" />
+    <None Remove="images\front-arrow.png" />
+    <None Remove="images\heart.png" />
+    <None Remove="images\help1.PNG" />
+    <None Remove="images\HelpPage.PNG" />
+    <None Remove="images\HelpPage1.PNG" />
+    <None Remove="images\HelpPage2.PNG" />
+    <None Remove="images\HelpPage3.PNG" />
+    <None Remove="images\HelpPage4.PNG" />
+    <None Remove="images\HelpPage5.PNG" />
+    <None Remove="images\HelpPage6.PNG" />
+    <None Remove="images\home.png" />
+    <None Remove="images\increase.png" />
+    <None Remove="images\ios15-cellular-signal-icon.png" />
+    <None Remove="images\lunch.jpg" />
+    <None Remove="images\recommended.jpg" />
+    <None Remove="images\Rectangle 16.png" />
+    <None Remove="images\search-interface-symbol.png" />
+    <None Remove="images\setting.png" />
+    <None Remove="images\shoppingCart.png" />
+    <None Remove="images\shoppingCartGrey.png" />
+    <None Remove="images\sort-alt.png" />
+    <None Remove="images\sort.png" />
+    <None Remove="images\SpinichLasagna.png" />
+    <None Remove="images\star.png" />
+    <None Remove="images\starfull.png" />
+    <None Remove="images\stars.png" />
+    <None Remove="images\trend.png" />
+    <None Remove="images\unfilledheart.png" />
+    <None Remove="images\user.png" />
+    <None Remove="images\waffles.jpg" />
+    <None Remove="ios15-battery-charging-status-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.SfInput.WPF" Version="21.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\arrow-left.png" />
+    <Resource Include="images\arrow-small-left.png" />
+    <Resource Include="images\back-arrow.png" />
+    <Resource Include="images\back.png" />
+    <Resource Include="images\backbutton.png" />
+    <Resource Include="images\breakfast.jfif" />
+    <Resource Include="images\breakfast1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\breakfast2.png" />
+    <Resource Include="images\breakfast3.png" />
+    <Resource Include="images\breakfast4.png" />
+    <Resource Include="images\CajunStuffedPeppers.jpg" />
+    <Resource Include="images\ContactPage.PNG" />
+    <Resource Include="images\decrease.png" />
+    <Resource Include="images\dessert.jpg" />
+    <Resource Include="images\favheart.png" />
+    <Resource Include="images\favheartfull.png" />
+    <Resource Include="images\filledheart.png" />
+    <Resource Include="images\filter.png" />
+    <Resource Include="images\forward.png" />
+    <Resource Include="images\front-arrow.png" />
+    <Resource Include="images\heart.png" />
+    <Resource Include="images\HelpPage.PNG" />
+    <Resource Include="images\HelpPage1.PNG" />
+    <Resource Include="images\HelpPage2.PNG" />
+    <Resource Include="images\HelpPage3.PNG" />
+    <Resource Include="images\HelpPage4.PNG" />
+    <Resource Include="images\HelpPage5.PNG" />
+    <Resource Include="images\HelpPage6.PNG" />
+    <Resource Include="images\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\increase.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ios15-battery-charging-status-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ios15-cellular-signal-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\lunch.jpg" />
+    <Resource Include="images\recommended.jpg" />
+    <Resource Include="images\Rectangle 16.png" />
+    <Resource Include="images\search-interface-symbol.png" />
+    <Resource Include="images\setting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\shoppingCart.png" />
+    <Resource Include="images\shoppingCartGrey.png" />
+    <Resource Include="images\sort-alt.png" />
+    <Resource Include="images\sort.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\SpinichLasagna.png" />
+    <Resource Include="images\star.png" />
+    <Resource Include="images\starfull.png" />
+    <Resource Include="images\stars.png" />
+    <Resource Include="images\trend.png" />
+    <Resource Include="images\unfilledheart.png" />
+    <Resource Include="images\user.png" />
+    <Resource Include="images\waffles.jpg" />
+  </ItemGroup>
+
+</Project>

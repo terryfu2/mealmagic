@@ -1,0 +1,218 @@
+﻿<Page x:Name="filterPage" x:Class="mealmagic.FilterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:mealmagic"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="300"
+      Title="FilterPage">
+
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+
+    <StackPanel Background="#FF003638">
+
+
+        <Grid x:Name="iPhoneTopBar" Height="36" Background="Black">
+            <Image Source="/images/ios15-battery-charging-status-icon.png" Width="40" RenderTransformOrigin="4.22,0.516" HorizontalAlignment="Left" Margin="258,3,0,-1"/>
+            <Image Source="/images/ios15-cellular-signal-icon.png" Width="40" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        </Grid>
+        <StackPanel Height="554" Background="#FF003638">
+
+
+
+            <Grid x:Name="SearchSettingsFilter" Height="50" RenderTransformOrigin="0.15,0.317">
+
+
+                <Grid Grid.Row="0" x:Name="viewRecipeTopBar" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Background="{x:Null}"  BorderThickness="0" Click="Back" RenderTransformOrigin="2.934,-0.473" HorizontalAlignment="Left" Padding="10,1,1,1">
+                        <Image  Source="/images/back-arrow.png" Width="42" Height="42" />
+                    </Button>
+
+
+                    <Button Grid.Column="2" x:Name="Filter1" Background="#FFCB2027" BorderThickness="0" ClickMode="Press" Cursor="Cross" Click="Apply" Height="31" Margin="-10,0,10,0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Content>
+                            <TextBlock Text="Apply" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Grid>
+
+
+            <Label Content="  Sort By" FontSize="30" FontFamily="Century Gothic" Background="Transparent" Foreground="White" Height="48" RenderTransformOrigin="0.528,-1.982" />
+
+
+            <Grid Height="122">
+
+                <!--<Button x:Name="ratings" Height="50" Margin="22,0,70,72" Background="{x:Null}" BorderThickness="2" BorderBrush="Green" ClickMode="Press" Cursor="Cross">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock Text="Ratings: high to Low" FontFamily="Century Gothic" FontSize="20" Foreground="White"/>
+                </Button>-->
+
+                <Button x:Name="ratings" Height="50" Margin="22,0,70,72" Background="{x:Null}" BorderThickness="2" BorderBrush="Green" ClickMode="Press" Cursor="Cross" Click="ratings_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock Text="Ratings: high to Low" FontFamily="Century Gothic" FontSize="20" Foreground="White"/>
+                </Button>
+
+
+
+
+                <Button x:Name="calories" Height="50" Margin="22,62,70,10" Background="{x:Null}" BorderThickness="2" BorderBrush="Blue" ClickMode="Press" Cursor="Cross" Click="calories_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock Text="Calories: low to high" FontFamily="Century Gothic" FontSize="20" Foreground="White"/>
+                </Button>
+            </Grid>
+            <Label Content="  FIlter By&#xA;" FontSize="30" FontFamily="Century Gothic" Background="Transparent" Foreground="White" Height="47" RenderTransformOrigin="0.528,-1.982" />
+
+
+
+
+            <Grid Height="93" RenderTransformOrigin="0.483,-2.01" Width="261">
+
+                <StackPanel Margin="10" VerticalAlignment="Center"/>
+
+                <TextBox x:Name="currentCookingSliderValue" TextWrapping="Wrap" Margin="192,4,10,69"
+                     BorderThickness="0" Background="Transparent" Foreground="White" RenderTransformOrigin="0.364,0.8"/>
+
+                <Label Content="0&#xA;" Margin="36,45,202,22" FontFamily="Century Gothic" Background="Transparent" Foreground="White"/>
+                <Slider x:Name="cookSlider" Margin="36,26,44,47" Foreground="Pink" Background="Black" Maximum="100" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True" Value="50" ValueChanged="CookSlider_ValueChanged"/>
+                <Label x:Name="cookSliderLabel" Content="Cooking TIme (Mins)" Foreground="White" FontFamily="Century Gothic" HorizontalAlignment="Center" VerticalAlignment="Top" Width="132" Height="25" Margin="0,1,0,0"/>
+                <Label Content="100&#xD;&#xA;" Margin="205,45,20,22"  FontFamily="Century Gothic" Background="Transparent" Foreground="White"/>
+                <TextBox x:Name="currentCalSliderValue" TextWrapping="Wrap" BorderThickness="0" Background="Transparent"  Foreground="White" Margin="183,63,0,0" Height="20" VerticalAlignment="Top" RenderTransformOrigin="1.032,-1.55"/>
+
+
+
+                <StackPanel Margin="10" VerticalAlignment="Center"/>
+                <!--<syncfusion:SfRangeSlider x:Name="cookingRange" RangeStart="20" RangeEnd="80" ShowRange="True"  ToolTipFormat ="#"  ToolTipStyle="{StaticResource ToolTipStyle}" Margin="36,31,38,51"  ThumbToolTipPlacement="BottomRight"  />
+                <syncfusion:SfRangeSlider x:Name="caloriesRange" Minimum="0" Maximum="1000" RangeStart="200" RangeEnd="800" ShowRange="True"  ToolTipFormat ="#"  ToolTipStyle="{StaticResource ToolTipStyle}" Margin="38,83,37,-1"  ThumbToolTipPlacement="BottomRight"  />-->
+
+
+            </Grid>
+            <Grid Height="87">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="26*"/>
+                    <ColumnDefinition Width="97*"/>
+                </Grid.ColumnDefinitions>
+                <Slider  x:Name="calSlider" Margin="59,-11,67,79" Foreground="Pink" Background="Black"  Maximum="1000" TickPlacement="BottomRight" TickFrequency="100" IsSnapToTickEnabled="True" Value="500" ValueChanged="CalSlider_ValueChanged" Grid.ColumnSpan="7"/>
+                <Label Content="Calories (Cals)" Foreground="White" FontFamily="Century Gothic" Margin="105,-31,82,79" Grid.ColumnSpan="7"/>
+                <Slider  x:Name="costSlider" Margin="54,47,61,24" Foreground="Pink" Background="#FF003638" Grid.ColumnSpan="7" Maximum="100" TickPlacement="BottomRight" TickFrequency="50" IsSnapToTickEnabled="True" Value="50" />
+                <Label Content="Cost&#xD;&#xA;" Foreground="White" FontFamily="Century Gothic" Margin="129,24,10,32" Grid.ColumnSpan="5"/>
+                <Label Content="0&#xA;" Margin="54,0,54,61" FontFamily="Century Gothic" Background="Transparent" Foreground="White"/>
+                <Label Content="1000&#xD;&#xA;" Margin="15,0,36,61" FontFamily="Century Gothic" Background="Transparent" Foreground="White" Grid.Column="6"/>
+                <Label Content="Low&#xD;&#xA;" Margin="46,63,46,0" FontFamily="Century Gothic" Background="Transparent" Foreground="White"/>
+                <Label Content="High" Margin="1,62,58,-1" FontFamily="Century Gothic" Background="Transparent" Foreground="White" Grid.Column="6"/>
+                <Label Content="Medium&#xD;&#xA;" Margin="120,63,23,0" FontFamily="Century Gothic" Background="Transparent" Foreground="White" Grid.ColumnSpan="6"/>
+            </Grid>
+            <Label Content="                    Dietary Restiction&#xA;" FontSize="15" FontFamily="Century Gothic" Background="Transparent" Foreground="White" Height="28" RenderTransformOrigin="0.528,-1.982" />
+            <Grid Height="81">
+                <Button x:Name="lowcarb" Margin="22,0,165,55" Background="{x:Null}" BorderThickness="1" BorderBrush="Red" ClickMode="Press" Cursor="Cross" Click="lowcarb_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="2"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock Text="+ Low carb" FontFamily="Century Gothic" FontSize="9" Foreground="White" Width="57"/>
+                </Button>
+                <Button x:Name="vegan" Margin="160,0,22,55" Background="{x:Null}" BorderThickness="1" BorderBrush="Green" ClickMode="Press" Cursor="Cross" Click="vegan_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="2"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock Text="+ Vegan" FontFamily="Century Gothic" FontSize="10" Foreground="White"/>
+                </Button>
+                <Button x:Name="dairy" Margin="22,40,165,15" Background="{x:Null}" BorderThickness="1" BorderBrush="Blue" ClickMode="Press" Cursor="Cross" Click="dairy_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="2"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock Text="+ Dairy Free" FontFamily="Century Gothic" FontSize="10" Foreground="White"/>
+                </Button>
+                <Button x:Name="gluten" Margin="160,40,22,15" Background="{x:Null}" BorderThickness="1" BorderBrush="Pink" ClickMode="Press" Cursor="Cross" Click="gluten_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="2"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock Text="+ Gluten Free" FontFamily="Century Gothic" FontSize="10" Foreground="White"/>
+                </Button>
+
+
+
+
+            </Grid>
+
+        </StackPanel>
+
+        <Grid x:Name="BottomMenu" Height="60" Background="#EEEEEE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Tag="Home" Grid.Column="0" Width="50" Height="50" Background="{x:Null}" BorderThickness="0" Click="navigate">
+                <Image Width="30" Source="/images/home.png" Margin="10"/>
+            </Button>
+
+            <Button Tag="Trending" Grid.Column="1" Width="50" Height="50" Background="{x:Null}" BorderThickness="0" Click="navigate">
+                <Image Width="30" Source="/images/trend.png" Margin="10"/>
+            </Button>
+
+            <Button Tag="Favorites" Grid.Column="2" Width="50" Height="50" Background="{x:Null}" BorderThickness="0" Click="navigate">
+                <Image Width="30" Source="/images/heart.png" Margin="10"/>
+            </Button>
+
+            <Button Tag="Shopping" Grid.Column="3" Width="50" Height="50" Background="{x:Null}" BorderThickness="0" Click="navigate">
+                <Image Width="30" Source="/images/shoppingCart.png" Margin="10"/>
+            </Button>
+
+            <Button Tag="Account" Grid.Column="4" Width="50" Height="50" Background="{x:Null}" BorderThickness="0" Click="navigate">
+                <Image Width="30" Source="/images/user.png" Margin="10"/>
+            </Button>
+        </Grid>
+
+
+    </StackPanel>
+
+</Page>

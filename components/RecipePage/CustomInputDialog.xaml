@@ -1,0 +1,25 @@
+﻿<Window x:Class="mealmagic.CustomInputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Custom Input Dialog" Height="200" Width="200"
+        WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize" >
+    <Grid Background="#FF003638">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Enter item name:" Foreground="White" FontFamily="DejaVu Sans Light" FontSize="16" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,140" Grid.RowSpan="2"/>
+        <TextBox x:Name="txtInput" Grid.Row="1" Margin="10,24,10,99" BorderBrush="Transparent" Background="#9BC4CB" Grid.ColumnSpan="2" TextChanged="TxtInput_TextChanged" />
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Margin="14,75,0,0" Width="66" Grid.Column="1">
+            <Button x:Name="BtnOk" Content="OK" Width="65" Click="BtnOk_Click" Height="29" FontFamily="DejaVu Sans Light" FontSize="15" Background="Transparent" Foreground="White" BorderBrush="Transparent"/>
+            <Button x:Name="BtnCancel" Content="Cancel" Width="65" Click="BtnCancel_Click" Height="37" FontFamily="DejaVu Sans Light" FontSize="15" Background="Transparent" Foreground="White" BorderBrush="Transparent"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

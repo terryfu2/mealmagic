@@ -1,0 +1,83 @@
+﻿<Window x:Class="mealmagic.Window2"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mealmagic"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="300" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}">
+
+    <StackPanel Background="#FF003638">
+
+
+        <Grid x:Name="iPhoneTopBar" Height="36" Background="Black">
+            <Image Source="/images/ios15-battery-charging-status-icon.png" Width="40" RenderTransformOrigin="4.22,0.516" HorizontalAlignment="Left" Margin="258,3,0,-1"/>
+            <Image Source="/images/ios15-cellular-signal-icon.png" Width="40" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        </Grid>
+        <StackPanel Height="554" Background="#FF003638">
+
+            <Grid x:Name="SearchSettingsFilter" Height="50" RenderTransformOrigin="0.15,0.317">
+
+                <Button x:Name="back" Width="30" Height="30" Margin="10,20,260,0" Background="{x:Null}"  BorderThickness="0" ClickMode="Press" Cursor="Cross">
+                    <Image  Width="30" Source="/images/back.png" />
+                </Button>
+
+                <Button x:Name="Filter" Width="30" Height="30" Margin="260,20,10,0" Background="{x:Null}"  BorderThickness="0" ClickMode="Press" Cursor="Cross"/>
+                <Button Content="Apply" FontSize="17" FontFamily="DejaVu Sans Light" Foreground="White" Background="#E74C3C" BorderBrush="#E74C3C" Margin="213,20,6,0"/>
+            </Grid>
+            <Label Content="  Sort By" FontSize="32" HorizontalAlignment="Left"   Foreground="White" FontFamily="DejaVu Sans Light" Height="55" Width="150"/>
+            <Button Content="Ratings: High to Low" FontSize="17" FontFamily="DejaVu Sans Light" Foreground="White" Background="#FF003638" BorderBrush="#16A085" BorderThickness="3" Margin="8,-3,90,80" Width="201"/>
+            <Button Content="Calories: Low to High" FontSize="17" FontFamily="DejaVu Sans Light" Foreground="White" Background="#FF003638" BorderBrush="#2980B9" BorderThickness="3" Margin="8,-75,90,80" Width="201"/>
+
+            <Label Content="  Filter By" FontSize="32" HorizontalAlignment="Left" Margin="0,-79,90,80"  Foreground="White" FontFamily="DejaVu Sans Light" Height="52" Width="158"/>
+            <Label Content="Cooking time (min)" FontSize="17"  Foreground="White" Margin="0,-89,2,80" FontFamily="DejaVu Sans Light" Height="35" Width="160"/>
+            <Label Content="Calories (kcal)" FontSize="17"  Foreground="White" Margin="0,-60,-20,80" FontFamily="DejaVu Sans Light" Height="35" Width="133"/>
+
+            <Label Content="Cost" FontSize="17"  Foreground="White" Margin="0,-53,-20,80" FontFamily="DejaVu Sans Light" Height="35" Width="73"/>
+            <Slider Height="8" Width="190" Margin="0,-80,-20,80" Background="Black" BorderBrush="#16A085" Foreground="#16A085"/>
+
+
+
+            <Label Content="Dietary Restriction" FontSize="17"  Foreground="White" Margin="0,-50,-20,55" FontFamily="DejaVu Sans Light" Height="35" Width="151"/>
+            <Button Content="+ Low Carb" FontSize="17" FontFamily="DejaVu Sans Light" Foreground="White" Background="#FF003638" BorderBrush="#E74C3C" BorderThickness="3" Margin="-58,-50,90,80" Width="139" Height="33"/>
+            <Button Content="+ Vegan" FontSize="17" FontFamily="DejaVu Sans Light" Foreground="White" Background="#FF003638" BorderBrush="#16A085" BorderThickness="3" Margin="90,-114,-60,150" Width="139" Height="33"/>
+            <Button Content="+ Dairy Free" FontSize="17" FontFamily="DejaVu Sans Light" Foreground="White" Background="#FF003638" BorderBrush="#2980B9" BorderThickness="3" Margin="-58,-150,90,80" Width="139" Height="33"/>
+            <Button Content="+ Gluten Free" FontSize="17" FontFamily="DejaVu Sans Light" Foreground="White" Background="#FF003638" BorderBrush="#BB8FCE" BorderThickness="3" Margin="90,-132,-60,150" Width="139" Height="33"/>
+
+
+
+
+
+        </StackPanel>
+
+
+
+        <Grid x:Name="BottomMenu" Height="60" Background="#FFDBEFBC">
+
+            <Button x:Name="Home" Width="50" Height="50" Margin="0,5,240,5" Background="{x:Null}"  BorderThickness="0" ClickMode="Press" Cursor="Cross" RenderTransformOrigin="-4.585,0.363">
+                <Image Width="50" Cursor="Cross" Source="/images/home.png"/>
+            </Button>
+
+            <Button x:Name="Trending" Width="50" Height="50" Margin="60,5,180,5" Background="{x:Null}"  BorderThickness="0" ClickMode="Press" Cursor="Cross" RenderTransformOrigin="-4.585,0.363">
+                <Image Width="50" Cursor="Cross" Source="/images/trend.png"/>
+            </Button>
+
+            <Button x:Name="Favorites" Width="50" Height="50" Margin="120,5,120,5" Background="{x:Null}"  BorderThickness="0" ClickMode="Press" Cursor="Cross" RenderTransformOrigin="-4.585,0.363">
+                <Image Width="50" Cursor="Cross" Source="/images/heart.png"/>
+            </Button>
+
+            <Button x:Name="Shopping" Width="50" Height="50" Margin="180,5,60,5" Background="{x:Null}"  BorderThickness="0" ClickMode="Press" Cursor="Cross" RenderTransformOrigin="-4.585,0.363">
+                <Image Width="50" Cursor="Cross" Source="/images/shoppingCart.png"/>
+            </Button>
+
+            <Button x:Name="Account" Width="50" Height="50" Margin="240,5,0,5" Background="{x:Null}"  BorderThickness="0" ClickMode="Press" Cursor="Cross" RenderTransformOrigin="-4.585,0.363">
+                <Image Width="50" Cursor="Cross" Source="/images/user.png"/>
+            </Button>
+
+        </Grid>
+
+
+
+    </StackPanel>
+
+</Window>
